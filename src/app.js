@@ -32,6 +32,11 @@ app.get("/api/pets", (req, res) => {
   res.json(pets);
 });
 
+app.post("/api/pets", (req, res) => {
+  const nuevaMascota = req.body;
+  users.push(nuevaMascota);
+  res.send({ status: "success", message: "Mascota creada correctamente!" });
+});
 //listen
 
 app.listen(PUERTO, () => {
