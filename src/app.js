@@ -3,14 +3,15 @@
 const express = require("express");
 const app = express();
 const PUERTO = 8080;
-const userRouter = require("./routes/users.router.js");
+const usersRouter = require("./routes/users.router.js");
 const petsRouter = require("./routes/pets.router.js");
 
 //recibir datos en formato json
 app.use(express.json());
 
 //rutas
-
+app.use("/api/users", usersRouter);
+app.use("/api/pets", petsRouter)
 //listen
 
 app.listen(PUERTO, () => {

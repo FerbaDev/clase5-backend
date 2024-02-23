@@ -8,11 +8,11 @@ const router = express.Router();
 const users = [];
 
 //rutas usuarios
-router.get("/api/users", (req, res) => {
+router.get("/", (req, res) => {
   res.json(users);
 });
 
-router.post("/api/users", (req, res) => {
+router.post("/", (req, res) => {
   const nuevoUsuario = req.body;
   users.push(nuevoUsuario);
   res.send({ status: "success", message: "Usuario creado correctamente!" });
