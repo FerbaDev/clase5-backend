@@ -17,3 +17,5 @@ app.use("/api/pets", petsRouter)
 app.listen(PUERTO, () => {
   console.log(`conectado en http://localhost:${PUERTO}`);
 });
+//configuramos express para mostrar carpeta static public
+app.use(express.static("public"))
